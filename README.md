@@ -4,7 +4,7 @@
 <ol>
     <li>compilator C++, daca aveti Visual Studio e in regula</li>
     <li>CMake</li>
-    <li>pip install face_recognition; pip install flask; pip install flask-cors;</li>
+    <li>rulati pip install -r requirements.txt pentru a descarca dependentele</li>
 </ol>
 
 <h3>Link-uri utile:</h3>
