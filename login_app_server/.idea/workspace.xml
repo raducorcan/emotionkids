@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="121b36d5-7888-4a6c-915f-757954d8d006" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/emotionkids.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/emotionkids.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/play.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/js/own/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/own/record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/login_app_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/login_app_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +100,7 @@
       <workItem from="1572941142458" duration="2625000" />
       <workItem from="1573389115889" duration="378000" />
       <workItem from="1573904209812" duration="8720000" />
+      <workItem from="1573914110141" duration="749000" />
     </task>
     <servers />
   </component>
@@ -124,7 +112,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
