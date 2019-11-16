@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b3b0481-fe16-449d-b708-6eaaaf2f6201" name="Default Changelist" comment="" />
+    <list default="true" id="3b3b0481-fe16-449d-b708-6eaaaf2f6201" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/emotionkids.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/emotionkids.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/own/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/own/record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/.idea/login_app_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/.idea/login_app_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/emotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +31,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1STQkE9HhmzWTwB5OX7Uj5hByav" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mobile/reactdemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,10 +73,22 @@
       <workItem from="1572941149953" duration="2448000" />
       <workItem from="1573389145876" duration="356000" />
       <workItem from="1573494331676" duration="20000" />
+      <workItem from="1573905360244" duration="6547000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

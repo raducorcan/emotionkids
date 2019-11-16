@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 import face_recognition
@@ -46,11 +45,3 @@ def recognise(filename):
         return "unknown_person"
 
     return filenames[index]
-    # print(filenames[index])
-    # print(tolerance)
-
-
-
-    # os.system('face_recognition --tolerance 0.5 ./known/kids ./unknown/kids/samegirl_unknown.jpg')
-    # print("_______________________________________________")
-    # x = os.system('face_recognition --tolerance 0.5 ./known/kids ./unknown/kids')

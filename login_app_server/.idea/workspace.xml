@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="121b36d5-7888-4a6c-915f-757954d8d006" name="Default Changelist" comment="" />
+    <list default="true" id="121b36d5-7888-4a6c-915f-757954d8d006" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/emotionkids.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/emotionkids.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/js/own/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/own/record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/login_app_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/login_app_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +30,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1Sy78lCmMlCiif6DfDw75UsoHaJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raduc\Desktop\ai\login_app_server" />
+      <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static\known\adults" />
       <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static\known\kids" />
       <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static\known" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\raduc\Desktop\ai\login_app_server" />
-      <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,13 +112,25 @@
       <workItem from="1572548026317" duration="625000" />
       <workItem from="1572941142458" duration="2625000" />
       <workItem from="1573389115889" duration="378000" />
+      <workItem from="1573904209812" duration="8720000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/login_app_server$app.coverage" NAME="app Coverage Results" MODIFIED="1573389161248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/login_app_server$app.coverage" NAME="app Coverage Results" MODIFIED="1573912147508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

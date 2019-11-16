@@ -3,54 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Play</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/own/record.js"></script>
-</head>
-<body onbeforeunload="unload();">
-<video autoplay="autoplay" id="videoElement" style="display: none">
-</video>
-<audio muted autoplay="autoplay" id="audioElement" style="display: none">
-</audio>
-<p>Hello <span id="username"></span>!</p>
-<p>Video and audio recording has started; when you leave this webpage, an audio and a video file will be downloaded</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <style>
+        #container {
+            margin: 0 auto;
+            width: 500px;
+            height: 375px;
+        }
 
+        #videoElement {
+            width: 500px;
+            height: 375px;
+        }
+    </style>
+</head>
+<body>
+<!--<audio muted autoplay="autoplay" id="audioElement" style="display: none">-->
+<!--</audio>-->
+<p>Hello <span id="username"></span>!</p>
+<div id="container" class="embed-responsive embed-responsive-16by9">
+    <video autoplay="autoplay" id="videoElement" class="embed-responsive-item">
+    </video>
+</div>
+<div class="text-center" style="margin: 10px">
+    <div id="last_emotion" class="text-primary"><p>Detecting emotion...</p></div>
+</div>
 <script>
     let video = document.querySelector("#videoElement");
-    let audio = document.querySelector("#audioElement");
+    // let audio = document.querySelector("#audioElement");
     $("#username").html(sessionStorage.getItem('username'));
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({video: true})
-            .then(function (str) {
-                video.srcObject = str;
-                let options = {mimeType: "video/webm; codecs=vp9"};
-                mediaRecorderVideo = new MediaRecorder(video.captureStream(), options);
+            .then(function (stream) {
+                video.srcObject = stream;
+                let mediaStreamTrack = stream.getVideoTracks()[0];
+                let imageCapture = new ImageCapture(mediaStreamTrack);
 
-                mediaRecorderVideo.ondataavailable = handleDataAvailableVideo;
-                mediaRecorderVideo.start();
-
-            })
-            .catch(function (error) {
-                alert(error.message + " video");
-                alert("For this app to work, we need your permission to access your webcam and microphone!")
-            });
-
-        navigator.mediaDevices.getUserMedia({audio: true})
-            .then(function (str) {
-                audio.srcObject = str;
-                let options = {mimeType: "audio/webm"};
-                mediaRecorderAudio = new MediaRecorder(audio.captureStream(), options);
-
-                mediaRecorderAudio.ondataavailable = handleDataAvailableAudio;
-                mediaRecorderAudio.start();
-
-            })
-            .catch(function (error) {
-                alert(error.message + " audio");
-                alert("For this app to work, we need your permission to access your webcam and microphone!")
-            });
+                setInterval(() => {
+                    imageCapture.takePhoto().then(blob => {
+                        let data = new FormData();
+                        data.append('emotion_image', blob);
+                        $.ajax({
+                            type: "POST",
+                            url: "http://127.0.0.1:5000/emotion",
+                            data: data,
+                            processData: false,
+                            contentType: false
+                        }).done(function (data, success) {
+                            $("#last_emotion").html(data.emotion)
+                        })
+                    })
+                }, 5000)
+            }).catch(function (error) {
+            alert(error.message)
+        })
     }
-    let recordedChunksVideo = [];
-    let recordedChunksAudio = [];
 </script>
 </body>
 </html>

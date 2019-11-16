@@ -4,6 +4,7 @@
 <ol>
     <li>compilator C++, daca aveti Visual Studio e in regula</li>
     <li>CMake</li>
+    <li>OpenCV</li>
     <li>rulati pip install -r requirements.txt pentru a descarca dependentele</li>
 </ol>
 
