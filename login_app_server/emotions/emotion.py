@@ -1,32 +1,49 @@
 import cv2
-import face_recognition
 import numpy as np
-from PIL import Image
-from keras.models import load_model
+import tensorflow as tf
+from keras_preprocessing.image import img_to_array
+
+PATH_TO_HAAR = "C:\\Users\\raduc\\Desktop\\ai\\git\\emotionkids\\login_app_server\\res\\haar.xml"
 
 
 class EmotionDetector:
     def __init__(self):
-        self.model = load_model("./res/emotions_model.hdf5")
-        emotion_dict = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Neutral', 5: 'Sad', 6: 'Surprise'}
+        # self.model = load_model("./res/emotions_model.hdf5")
+        self.model = tf.keras.models.load_model("./res/fer/trained_model_2.hdf5")
+        emotion_dict = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}
         self.labels = dict((k, v) for k, v in emotion_dict.items())
 
+    @staticmethod
+    def face_detector(img):
+        face_classifier = cv2.CascadeClassifier(PATH_TO_HAAR)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        faces = face_classifier.detectMultiScale(gray, 1.3, 5)
+        if faces is ():
+            return (0, 0, 0, 0), np.zeros((48, 48), np.uint8), img
+
+        for (x, y, w, h) in faces:
+            cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+            roi_gray = gray[y:y + h, x:x + w]
+
+        try:
+            roi_gray = cv2.resize(roi_gray, (48, 48), interpolation=cv2.INTER_AREA)
+        except:
+            return (x, w, y, h), np.zeros((48, 48), np.uint8), img
+        return (x, w, y, h), roi_gray, img
+
     def detectEmotion(self, filename):
-        image = face_recognition.load_image_file(filename)
-        face_locations = face_recognition.face_locations(image)
-        if len(face_locations) == 0:
-            return "No face detected"
-        top, right, bottom, left = face_locations[0]
-        face_image1 = image[top:bottom, left:right]
-        image_save = Image.fromarray(face_image1)
-        image_save.save(filename)
-
         face_image = cv2.imread(filename)
-        face_image = cv2.resize(face_image, (48, 48))
-        face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2GRAY)
+        rect, face, image = self.face_detector(face_image)
+        if np.sum([face]) != 0.0:
+            roi = face.astype("float") / 255.0 #region of interest
+            roi = img_to_array(roi)
+            roi = np.expand_dims(roi, axis=0)
 
-        face_image = np.reshape(face_image, [1, face_image.shape[0], face_image.shape[1], 1])
-
-        predicted_class = np.argmax(self.model.predict(face_image))
-        predicted_label = self.labels[predicted_class]
-        return predicted_label
+            # make a prediction on the ROI, then lookup the class
+            preds = self.model.predict(roi)[0]
+            label = self.labels[preds.argmax()]
+            label2 = self.labels[np.array([preds[x] for x in range(len(preds)) if x != preds.argmax()]).argmax()]
+            print(label + ' ' + label2)
+            return label
+        else:
+            return "No face detected"

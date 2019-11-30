@@ -1,4 +1,3 @@
-import concurrent
 import os
 import random
 import string
@@ -6,7 +5,7 @@ import string
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from emotion import EmotionDetector
+from emotions.emotion import EmotionDetector
 from login import recognise
 
 app = Flask(__name__)
