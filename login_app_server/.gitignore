@@ -1,0 +1,5 @@
+/.idea
+*.iml
+/res/fer2013.csv
+/static
+/venv
