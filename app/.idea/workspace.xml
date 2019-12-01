@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b3b0481-fe16-449d-b708-6eaaaf2f6201" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../login_app_server/res/haar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+    <list default="true" id="3b3b0481-fe16-449d-b708-6eaaaf2f6201" name="Default Changelist" comment="add trained models">
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/play.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../login_app_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../login_app_server/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../login_app_server/emotions/emotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotions/emotion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../login_app_server/emotions/emotion_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotions/emotion_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../login_app_server/emotions/emotion_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotions/emotion_train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../login_app_server/emotions/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotions/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,7 +66,18 @@
       <workItem from="1573905360244" duration="7223000" />
       <workItem from="1574151051300" duration="2230000" />
       <workItem from="1575140017474" duration="3820000" />
+      <workItem from="1575202266765" duration="263000" />
+      <workItem from="1575203448632" duration="6654000" />
+      <workItem from="1575216260156" duration="298000" />
     </task>
+    <task id="LOCAL-00001" summary="add trained models">
+      <created>1575216453877</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575216453877</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,5 +95,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add trained models" />
+    <option name="LAST_COMMIT_MESSAGE" value="add trained models" />
   </component>
 </project>
