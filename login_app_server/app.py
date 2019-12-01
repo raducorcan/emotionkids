@@ -26,7 +26,7 @@ def hello():
 
 
 @app.route("/login", methods=['POST'])
-def fileUpload():
+def login():
     f = request.files['image']
     filename = generateFilename() + ".png"
     filename = os.path.join(app.config['UPLOAD_FOLDER_LOGIN'], filename)
@@ -45,8 +45,8 @@ def getEmotion():
     filename = os.path.join(app.config['UPLOAD_FOLDER_EMOTION'], filename)
     f.save(filename)
 
-    emotion = emotion_detector.detectEmotion(filename)
-    response = {'emotion': emotion}
+    primary_emotion, secondary_emotion = emotion_detector.detectEmotion(filename)
+    response = {'primary_emotion': primary_emotion, 'secondary_emotion': secondary_emotion}
     os.remove(filename)
     return jsonify(response)
 

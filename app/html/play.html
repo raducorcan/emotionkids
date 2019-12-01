@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<body>
+<body onbeforeunload="downloadReport(emotions);">
 <!--<audio muted autoplay="autoplay" id="audioElement" style="display: none">-->
 <!--</audio>-->
 <p>Hello <span id="username"></span>!</p>
@@ -36,9 +36,15 @@
 <div class="text-center" style="margin: 10px">
     <div id="last_emotion" class="text-primary"><p>Detecting emotion...</p></div>
 </div>
+<button style="margin: 10px" class="btn btn-info"
+        onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
+                window.location.href='report.html';">
+    Generate reports
+</button>
 <script>
     let video = document.querySelector("#videoElement");
     // let audio = document.querySelector("#audioElement");
+    let emotions = [];
     $("#username").html(sessionStorage.getItem('username'));
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({video: true})
@@ -58,13 +64,59 @@
                             processData: false,
                             contentType: false
                         }).done(function (data, success) {
-                            $("#last_emotion").html(data.emotion)
+                            if (data.primary_emotion !== 'No face detected') {
+                                emotions.push([data.primary_emotion, data.secondary_emotion]);
+                            }
+                            $("#last_emotion").html(data.primary_emotion)
                         })
                     })
                 }, 3000)
             }).catch(function (error) {
             alert(error.message)
         })
+    }
+
+    function downloadReport(rows) {
+        let filename = "emotions_report.csv";
+        const processRow = function (row) {
+            let finalVal = '';
+            for (let j = 0; j < row.length; j++) {
+                let innerValue = row[j] === null ? '' : row[j].toString();
+                if (row[j] instanceof Date) {
+                    innerValue = row[j].toLocaleString();
+                }
+                let result = innerValue.replace(/"/g, '""');
+                if (result.search(/([",\n])/g) >= 0)
+                    result = '"' + result + '"';
+                if (j > 0)
+                    finalVal += ',';
+                finalVal += result;
+            }
+            return finalVal + '\n';
+        };
+
+        let csvFile = '';
+        for (let i = 0; i < rows.length; i++) {
+            csvFile += processRow(rows[i]);
+        }
+
+        const blob = new Blob([csvFile], {type: 'text/csv;charset=utf-8;'});
+        if (navigator.msSaveBlob) { // IE 10+
+            navigator.msSaveBlob(blob, filename);
+        } else {
+            const link = document.createElement("a");
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+        return true;
     }
 </script>
 </body>

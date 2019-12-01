@@ -2,14 +2,14 @@ import os
 
 from keras import Sequential, regularizers
 from keras.layers import Flatten, Dropout, Dense, \
-    MaxPooling2D, Conv2D
+    MaxPooling2D, Conv2D, ZeroPadding2D
 from keras.optimizers import Adam
 from keras_preprocessing.image import ImageDataGenerator
 from tensorflow import keras
 
 num_classes = 7
 img_rows, img_cols = 48, 48
-batch_size = 512
+batch_size = 128
 
 train_data_dir = '../res/Training'
 validation_data_dir = '../res/PublicTest'
@@ -37,18 +37,18 @@ validation_generator = val_datagen.flow_from_directory(
     class_mode='categorical')
 
 model = Sequential()
-model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', kernel_regularizer=regularizers.l2(0.0001),
+model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', kernel_regularizer=regularizers.l2(0.0001), padding='same',
                  input_shape=(48, 48, 1)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-model.add(Conv2D(64, kernel_size=(3, 3), activation='relu', kernel_regularizer=regularizers.l2(0.0001)))
+model.add(Conv2D(64, kernel_size=(3, 3), activation='relu', kernel_regularizer=regularizers.l2(0.0001), padding='same'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-model.add(Conv2D(128, kernel_size=(3, 3), activation='relu', kernel_regularizer=regularizers.l2(0.0001)))
+model.add(Conv2D(128, kernel_size=(3, 3), activation='relu', kernel_regularizer=regularizers.l2(0.0001), padding='same'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Conv2D(128, kernel_size=(1, 1), activation='relu', kernel_regularizer=regularizers.l2(0.0001)))
-
+model.add(Conv2D(128, kernel_size=(1, 1), activation='relu', kernel_regularizer=regularizers.l2(0.0001)))
 
 model.add(Flatten())
 model.add(Dense(2048, activation='relu'))
@@ -57,7 +57,7 @@ model.add(Dense(7, activation='softmax'))
 
 model.summary()
 
-filepath = os.path.join("../res/fer/trained_model_3.hdf5")
+filepath = os.path.join("../res/fer/trained_model.hdf5")
 
 checkpoint = keras.callbacks.ModelCheckpoint(filepath,
                                              monitor='val_accuracy',
@@ -72,7 +72,7 @@ model_info = model.fit_generator(
     train_generator,
     steps_per_epoch=nb_train_samples // batch_size,
     epochs=epochs,
+    verbose=2,
     callbacks=callbacks,
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
-

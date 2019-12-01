@@ -9,7 +9,7 @@ PATH_TO_HAAR = "C:\\Users\\raduc\\Desktop\\ai\\git\\emotionkids\\login_app_serve
 class EmotionDetector:
     def __init__(self):
         # self.model = load_model("./res/emotions_model.hdf5")
-        self.model = tf.keras.models.load_model("./res/fer/trained_model_2.hdf5")
+        self.model = tf.keras.models.load_model("./res/fer/trained_model.hdf5")
         emotion_dict = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}
         self.labels = dict((k, v) for k, v in emotion_dict.items())
 
@@ -35,15 +35,19 @@ class EmotionDetector:
         face_image = cv2.imread(filename)
         rect, face, image = self.face_detector(face_image)
         if np.sum([face]) != 0.0:
-            roi = face.astype("float") / 255.0 #region of interest
+            roi = face.astype("float") / 255.0  # region of interest
             roi = img_to_array(roi)
             roi = np.expand_dims(roi, axis=0)
 
             # make a prediction on the ROI, then lookup the class
             preds = self.model.predict(roi)[0]
             label = self.labels[preds.argmax()]
-            label2 = self.labels[np.array([preds[x] for x in range(len(preds)) if x != preds.argmax()]).argmax()]
-            print(label + ' ' + label2)
-            return label
+            second_best = np.array([preds[x] for x in range(len(preds)) if x != preds.argmax()]).argmax()
+            try:
+                second_best = second_best[0]
+            except IndexError:
+                pass
+            label2 = self.labels[second_best]
+            return label, label2
         else:
-            return "No face detected"
+            return "No face detected", ""
