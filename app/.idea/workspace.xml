@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b3b0481-fe16-449d-b708-6eaaaf2f6201" name="Default Changelist" comment="add trained models">
+      <change afterPath="$PROJECT_DIR$/html/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app_server/emotions/resnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app_server/emotions/transfer_learn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app_server/res/fer/trained_model_resnet.hdf5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app_server/res/fer/trained_model_resnet_adam.hdf5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app_server/res/fer/trained_model_resnet_improved.hdf5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../login_app_server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/emotions/emotion_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotions/emotion_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login_app_server/emotions/emotion_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../login_app_server/emotions/emotion_train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../mobile/reactdemo" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -68,7 +78,12 @@
       <workItem from="1575140017474" duration="3820000" />
       <workItem from="1575202266765" duration="263000" />
       <workItem from="1575203448632" duration="6654000" />
-      <workItem from="1575216260156" duration="298000" />
+      <workItem from="1575216260156" duration="864000" />
+      <workItem from="1575308781184" duration="173000" />
+      <workItem from="1575362073470" duration="1479000" />
+      <workItem from="1575386113955" duration="854000" />
+      <workItem from="1575658124383" duration="1582000" />
+      <workItem from="1575706434150" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="add trained models">
       <created>1575216453877</created>

@@ -7,10 +7,10 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 num_classes = 7
 img_rows, img_cols = 48, 48
-batch_size = 512
+batch_size = 96
 nb_validation_samples = 3589
 test_data_dir = '../res/PrivateTest'
-model = load_model("../res/fer/trained_model.hdf5")
+model = load_model("../res/fer/trained_model_resnet_improving.hdf5")
 val_datagen = ImageDataGenerator(rescale=1. / 255)
 
 validation_generator = val_datagen.flow_from_directory(

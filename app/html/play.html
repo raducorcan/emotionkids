@@ -39,7 +39,13 @@
 <button style="margin: 10px" class="btn btn-info"
         onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
                 window.location.href='report.html';">
-    Generate reports
+    Generate pie chart report
+</button>
+
+<button style="margin: 10px" class="btn btn-info"
+        onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
+                window.location.href='heatmap.html';">
+    Generate heat map report
 </button>
 <script>
     let video = document.querySelector("#videoElement");

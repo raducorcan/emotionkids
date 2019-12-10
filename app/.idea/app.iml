@@ -14,5 +14,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="anychart-core" level="application" />
     <orderEntry type="library" name="anychart-pie" level="application" />
+    <orderEntry type="library" name="plotly-latest" level="application" />
   </component>
 </module>
