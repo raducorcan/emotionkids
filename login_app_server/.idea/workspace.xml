@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="121b36d5-7888-4a6c-915f-757954d8d006" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/play.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotions/emotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotions/emotion.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/known/adults" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -231,6 +227,7 @@
       <workItem from="1576691625912" duration="20000" />
       <workItem from="1576865664456" duration="598000" />
       <workItem from="1577376442114" duration="32000" />
+      <workItem from="1578936209647" duration="410000" />
     </task>
     <servers />
   </component>
