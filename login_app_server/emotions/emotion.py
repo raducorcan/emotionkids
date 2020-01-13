@@ -9,7 +9,7 @@ PATH_TO_HAAR = "C:\\Users\\raduc\\Desktop\\ai\\git\\emotionkids\\login_app_serve
 class EmotionDetector:
     def __init__(self):
         # self.model = load_model("./res/emotions_model.hdf5")
-        self.model = tf.keras.models.load_model("./res/fer/trained_model.hdf5")
+        self.model = tf.keras.models.load_model("./res/fer/trained_model_resnet_improving.hdf5")
         emotion_dict = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}
         self.labels = dict((k, v) for k, v in emotion_dict.items())
 

@@ -34,7 +34,7 @@ def login():
 
     name = recognise(filename)
     response = {'name': name}
-    os.remove(filename)
+    # os.remove(filename)
     return jsonify(response)
 
 

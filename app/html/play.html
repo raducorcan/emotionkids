@@ -13,6 +13,10 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     <style>
+        html, body{
+            height: 100%;
+        }
+
         #container {
             margin: 0 auto;
             width: 500px;
@@ -25,28 +29,38 @@
         }
     </style>
 </head>
-<body onbeforeunload="downloadReport(emotions);">
+<body>
 <!--<audio muted autoplay="autoplay" id="audioElement" style="display: none">-->
 <!--</audio>-->
-<p>Hello <span id="username"></span>!</p>
-<div id="container" class="embed-responsive embed-responsive-16by9">
-    <video autoplay="autoplay" id="videoElement" class="embed-responsive-item">
-    </video>
-</div>
-<div class="text-center" style="margin: 10px">
-    <div id="last_emotion" class="text-primary"><p>Detecting emotion...</p></div>
-</div>
-<button style="margin: 10px" class="btn btn-info"
-        onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
-                window.location.href='report.html';">
-    Generate pie chart report
-</button>
+<div style="height: 100%;">
+    <div style="float: left; width: 50%">
+        <div class="d-flex align-items-center" style="height: 100%; width: 100%; padding: 10px;">
+            <div class="container text-center text-success display-4"><p>Hello <span id="username"></span>!</p></div>
+        </div>
+        <div id="container" class="embed-responsive embed-responsive-16by9" style="border: 5px solid green">
+            <video autoplay="autoplay" id="videoElement" class="embed-responsive-item">
+            </video>
+        </div>
 
-<button style="margin: 10px" class="btn btn-info"
-        onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
-                window.location.href='heatmap.html';">
-    Generate heat map report
-</button>
+        <div class="text-center">
+            <button style="margin: 10px" class="btn btn-info"
+                    onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
+                window.open('report.html', '_blank');">
+                Generate pie chart report
+            </button>
+
+            <button style="margin: 10px" class="btn btn-info"
+                    onclick="sessionStorage.setItem('emotions', JSON.stringify(emotions));
+                window.open('chart.html', '_blank');">
+                Generate heat map report
+            </button>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center" style="float: right; width: 50%; height: 100%">
+        <div id="last_emotion" class="text-primary text-center display-4"><p>Detecting emotion...</p></div>
+    </div>
+</div>
 <script>
     let video = document.querySelector("#videoElement");
     // let audio = document.querySelector("#audioElement");
@@ -76,7 +90,7 @@
                             $("#last_emotion").html(data.primary_emotion)
                         })
                     })
-                }, 3000)
+                }, 2000)
             }).catch(function (error) {
             alert(error.message)
         })

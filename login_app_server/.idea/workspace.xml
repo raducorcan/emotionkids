@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="121b36d5-7888-4a6c-915f-757954d8d006" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/html/chart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emotions/resnet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emotions/transfer_learn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fer/trained_model_resnet.hdf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fer/trained_model_resnet_adam.hdf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fer/trained_model_resnet_improved.hdf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fer/trained_model_resnet_improving.hdf5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/.idea/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/html/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/play.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/html/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/html/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotions/emotion_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotions/emotion_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotions/emotion_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotions/emotion_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotions/emotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/emotions/emotion.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/known/adults" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -49,6 +39,7 @@
       <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static\known" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raduc\Desktop\ai\git\emotionkids\login_app_server\static\known\adults" />
       <recent name="C:\Users\raduc\Desktop\ai\git\emotionkids\login_app_server" />
       <recent name="C:\Users\raduc\Desktop\ai\login_app_server" />
       <recent name="C:\Users\raduc\Desktop\ai\login_app_server\static" />
@@ -66,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.emotion_test">
+  <component name="RunManager" selected="Python.app">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="login_app_server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,11 +177,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.emotion_test" />
         <item itemvalue="Python.transfer_learn" />
         <item itemvalue="Python.emotion_train" />
         <item itemvalue="Python.gputest" />
-        <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +223,14 @@
       <workItem from="1575624083990" duration="11192000" />
       <workItem from="1575659647869" duration="3881000" />
       <workItem from="1575994861994" duration="7056000" />
+      <workItem from="1576499613261" duration="3719000" />
+      <workItem from="1576514285976" duration="1490000" />
+      <workItem from="1576565827149" duration="699000" />
+      <workItem from="1576570790918" duration="1487000" />
+      <workItem from="1576601474639" duration="29000" />
+      <workItem from="1576691625912" duration="20000" />
+      <workItem from="1576865664456" duration="598000" />
+      <workItem from="1577376442114" duration="32000" />
     </task>
     <servers />
   </component>
@@ -253,7 +252,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/login_app_server$emotion_test.coverage" NAME="emotion_test Coverage Results" MODIFIED="1576004537134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotions" />
-    <SUITE FILE_PATH="coverage/login_app_server$app.coverage" NAME="app Coverage Results" MODIFIED="1575386185678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/login_app_server$app.coverage" NAME="app Coverage Results" MODIFIED="1576865716083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/login_app_server$gputest.coverage" NAME="gputest Coverage Results" MODIFIED="1575494974024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotions" />
     <SUITE FILE_PATH="coverage/login_app_server$emotion_train.coverage" NAME="emotion_train Coverage Results" MODIFIED="1575639132067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotions" />
     <SUITE FILE_PATH="coverage/login_app_server$emotion.coverage" NAME="emotion Coverage Results" MODIFIED="1575214373257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emotions" />
